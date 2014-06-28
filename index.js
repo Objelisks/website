@@ -17,6 +17,10 @@ var linksData = [
 	},
 ];
 
+var linkStyle = {
+  margin: '2pt',
+};
+
 var body = d3.select(document.body);
 
 function buildHeader() {
@@ -24,7 +28,10 @@ function buildHeader() {
 	var links = header.selectAll('a').data(linksData);
 	links.enter().append('a')
 		.text(function(d) { return d.name; })
-		.attr('href', function(d) { return d.url; });
+		.attr('href', function(d) { return d.url; })
+		.style(linkStyle);
 }
 
 buildHeader();
+
+body.append('section').attr('id', 'contact');
