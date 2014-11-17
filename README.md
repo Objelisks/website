@@ -32,9 +32,8 @@ Experimental projects
 Structure
 =========
 
-Entirely written in javascript using d3 to add elements.
-On page load
-build home page
-Links go to fragments and call some build function.
-Destroys previous page while saving any changed data to local storage
-Save loaded page to local storage to load back faster later.
+each page is written in a different language.
+home: haskell
+projects: lua
+contact: c
+stream: javascript
