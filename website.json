@@ -1,0 +1,32 @@
+{
+  "api": 1.0,
+  "website": {
+    "projects": [
+      {
+        "name": "Great Dungeon In The Sky",
+        "tags": ["game", "as3"],
+        "img": "./images/gdits.png"
+      },
+      {
+        "name": "This Website",
+        "tags": ["website", "js"],
+        "img": "./images/website.png"
+      },
+      {
+        "name": "@lsystembot",
+        "tags": ["twitter", "bot", "lsystem"],
+        "img": "./images/lsystembot.png"
+      },
+      {
+        "name": "@everypunk",
+        "tags": ["twitter", "bot"],
+        "img": "./images/everypunk.png"
+      }
+    ],
+    "contact": {
+      "email": "supertyrian at gmail.com",
+      "github": "https://github.com/Objelisks",
+      "twits": "https://twitter.com/objelisks"
+    }
+  }
+}
