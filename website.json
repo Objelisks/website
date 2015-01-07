@@ -5,22 +5,44 @@
       {
         "name": "Great Dungeon In The Sky",
         "tags": ["game", "as3"],
-        "img": "./images/gdits.png"
+        "img": "./images/gdits.png",
+        "link": "https://github.com/Objelisks/Great-Dungeon-in-the-Sky"
+      },
+      {
+        "name": "Astromancer",
+        "tags": ["ludumdare", "unity"],
+        "img": "./images/astro.png",
+        "link": "https://github.com/Objelisks/ld30"
+      },
+      {
+        "name": "Zeldalike Engine Prototype",
+        "tags": ["prototype", "unfinished", "js"],
+        "img": "./images/proto1.png",
+        "link": "https://github.com/Objelisks/combo"
+      },
+      {
+        "name": "Hitting Things With Sticks Prototype",
+        "tags": ["prototype", "unfinished", "js"],
+        "img": "./images/proto2.png",
+        "link": "https://github.com/Objelisks/babel"
       },
       {
         "name": "This Website",
         "tags": ["website", "js"],
-        "img": "./images/website.png"
+        "img": "./images/website.png",
+        "link": "https://github.com/Objelisks/website"
       },
       {
         "name": "@lsystembot",
-        "tags": ["twitter", "bot", "lsystem"],
-        "img": "./images/lsystembot.png"
+        "tags": ["twitter", "bot", "lsystem", "js"],
+        "img": "./images/lsystembot.png",
+        "link": "https://github.com/Objelisks/lsystembot"
       },
       {
         "name": "@everypunk",
-        "tags": ["twitter", "bot"],
-        "img": "./images/everypunk.png"
+        "tags": ["twitter", "bot", "js"],
+        "img": "./images/everypunk.png",
+        "link": "https://github.com/Objelisks/everypunk"
       }
     ],
     "contact": {
