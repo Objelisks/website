@@ -1,54 +1,73 @@
 {
-  "api": 1.0,
-  "website": {
-    "projects": [
-      {
-        "name": "Great Dungeon In The Sky",
-        "tags": ["game", "as3"],
-        "img": "./images/gdits.png",
-        "link": "https://github.com/Objelisks/Great-Dungeon-in-the-Sky"
-      },
-      {
-        "name": "Astromancer",
-        "tags": ["ludumdare", "unity"],
-        "img": "./images/astro.png",
-        "link": "https://github.com/Objelisks/ld30"
-      },
-      {
-        "name": "Zeldalike Engine Prototype",
-        "tags": ["prototype", "unfinished", "js"],
-        "img": "./images/proto1.png",
-        "link": "https://github.com/Objelisks/combo"
-      },
-      {
-        "name": "Hitting Things With Sticks Prototype",
-        "tags": ["prototype", "unfinished", "js"],
-        "img": "./images/proto2.png",
-        "link": "https://github.com/Objelisks/babel"
-      },
-      {
-        "name": "This Website",
-        "tags": ["website", "js"],
-        "img": "./images/website.png",
-        "link": "https://github.com/Objelisks/website"
-      },
-      {
-        "name": "@lsystembot",
-        "tags": ["twitter", "bot", "lsystem", "js"],
-        "img": "./images/lsystembot.png",
-        "link": "https://github.com/Objelisks/lsystembot"
-      },
-      {
-        "name": "@everypunk",
-        "tags": ["twitter", "bot", "js"],
-        "img": "./images/everypunk.png",
-        "link": "https://github.com/Objelisks/everypunk"
-      }
-    ],
-    "contact": {
-      "email": "supertyrian at gmail.com",
-      "github": "https://github.com/Objelisks",
-      "twits": "https://twitter.com/objelisks"
+  "projects": [
+    {
+      "name": "Great Dungeon In The Sky",
+      "tags": ["game", "as3"],
+      "img": "./images/gdits.png",
+      "links": [
+        {"verb": "play", "url": "http://www.kongregate.com/games/LordTim/great-dungeon-in-the-sky"},
+        {"verb": "source", "url": "https://github.com/Objelisks/Great-Dungeon-in-the-Sky"}
+      ]
+    },
+    {
+      "name": "Astromancer",
+      "tags": ["ludumdare", "unity"],
+      "img": "./images/astro.png",
+      "links": [
+        {"verb": "play", "url": "./ld30/index.html"},
+        {"verb": "source", "url": "https://github.com/Objelisks/ld30"}
+      ]
+    },
+    {
+      "name": "Topdown Prototype",
+      "tags": ["prototype", "unfinished", "js"],
+      "img": "./images/combo.png",
+      "links": [
+        {"verb": "play", "url": "./combo/index.html"},
+        {"verb": "source", "url": "https://github.com/Objelisks/combo"}
+      ]
+    },
+    {
+      "name": "Hitting Things With Sticks",
+      "tags": ["prototype", "unfinished", "js"],
+      "img": "./images/sticks.png",
+      "links": [
+        {"verb": "play", "url": "./babel/index.html"},
+        {"verb": "source", "url": "https://github.com/Objelisks/babel"}
+      ]
+    },
+    {
+      "name": "This Website",
+      "tags": ["website", "js"],
+      "img": "./images/website.png",
+      "links": [
+        {"verb": "link", "url": "."},
+        {"verb": "source", "url": "https://github.com/Objelisks/website"}
+      ]
+    },
+    {
+      "name": "@LSystemBot",
+      "tags": ["twitter", "bot", "lsystem", "js"],
+      "img": "./images/lsystembot.png",
+      "links": [
+        {"verb": "twitter", "url": "https://twitter.com/lsystembot"},
+        {"verb": "source", "url": "https://github.com/Objelisks/lsystembot"}
+      ]
+    },
+    {
+      "name": "@everypunk",
+      "tags": ["twitter", "bot", "js"],
+      "img": "./images/everypunk.png",
+      "links": [
+        {"verb": "twitter", "url": "https://twitter.com/everypunk"},
+        {"verb": "source", "url": "https://github.com/Objelisks/everypunk"}
+      ]
     }
+  ],
+
+  "contact": {
+    "email": "supertyrian at gmail.com",
+    "github": "https://github.com/Objelisks",
+    "twits": "https://twitter.com/objelisks"
   }
 }

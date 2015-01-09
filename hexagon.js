@@ -138,6 +138,7 @@ function init() {
     new Point(-415, -70),
     new Point(-560, 30)
   ]);
+  makeProjectsPage(pages.projects);
 
   pages.unknown = makeLayer(generateLSystemPath("FF", {
       "F": "UUUFUFF-F[UFF+F-F-+UUF+FUFF[--]+UU]FF",
@@ -173,6 +174,94 @@ function setupCanvas() {
   document.getElementById('canvas').style.background = colors.background;
   document.getElementById('canvas').style.width = '100%';
   document.getElementById('canvas').style.height = '100%';
+}
+
+function makeTextLink(text, url) {
+  text.onClick = function() {
+    window.open(url, '_blank');
+  };
+  text.onMouseEnter = function() {
+    text.fontSize = "18pt";
+  };
+  text.onMouseLeave = function() {
+    text.fontSize = "16pt";
+  };
+}
+
+function makeProjectTile(project) {
+  var tile = new Group();
+  var box = new Path.Rectangle(new Rectangle(0, 0, 270, 240), 3.0);
+  box.fillColor = colors.background;
+  box.strokeColor = colors.text;
+  box.opacity = 0.8;
+  var image = new Raster(project.img, new Point(135, 110));
+  image.strokeColor = colors.text;
+  var title = new PointText({
+    point: [135, 25],
+    content: project.name,
+    fontFamily: "open-sans-condensed",
+    fontSize: "24pt",
+    fillColor: colors.text,
+    justification: "center"
+  });
+
+  project.links.forEach(function(linkObj, i) {
+    var link = new PointText({
+      point: [10 + i*60,220],
+      content: linkObj.verb,
+      fontFamily: "open-sans-condensed",
+      fontSize: "16pt",
+      fontWeight: "bold",
+      fillColor: colors.text
+    });
+    makeTextLink(link, linkObj.url);
+    tile.appendTop(link);
+  });
+
+  tile.appendTop(image);
+  tile.appendTop(title);
+  tile.appendBottom(box);
+  return tile;
+}
+
+function getJson(filename, callback) {
+  console.log('starting ajax');
+  var ajax = new XMLHttpRequest();
+  ajax.open("GET", filename, true);
+  ajax.setRequestHeader("Content-type", "application/json");
+  ajax.onreadystatechange = function() {
+    console.log(ajax.readyState)
+    if(ajax.readyState == 4 && ajax.status == 200) {
+      var response = JSON.parse(ajax.responseText);
+      callback(response);
+    }
+  };
+  ajax.send();
+}
+
+function makeProjectsPage(layer) {
+  //var projects = loadProjects('website.json');
+  var tileHeight = 280,
+      tileWidth = 300,
+      tileCols = 3,
+      tileRows = 3;
+  getJson('./website.json', function(obj) {
+    console.log(obj);
+    var project1 = {
+      "name": "Great Dungeon In The Sky",
+      "tags": ["game", "as3"],
+      "img": "./images/gdits.png",
+      "play": "http://www.kongregate.com/games/LordTim/great-dungeon-in-the-sky",
+      "source": "https://github.com/Objelisks/Great-Dungeon-in-the-Sky"
+    };
+    obj.projects.forEach(function(project, i) {
+      var tile = makeProjectTile(project);
+      tile.position.x = Math.floor(i / tileRows) * tileWidth;
+      tile.position.y = (i % tileCols) * tileHeight - 300;
+      layer.addChild(tile);
+    });
+  });
+  return layer;
 }
 
 
